@@ -1,0 +1,25 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.para{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.para > Link{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid blue;
+}
