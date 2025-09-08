@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
-        <footer style={{textAlign:'center', padding:'1rem', borderTop:'1px solid #ccc', position:'absolute', bottom:'0', width:'100%'}}>
+        <footer style={{textAlign:'center', padding:'1rem', borderTop:'1px solid #ccc', position:'relative', bottom:'0', width:'100%'}}>
           <p>&copy; 2025 My Next.js App</p>
         </footer>
 
