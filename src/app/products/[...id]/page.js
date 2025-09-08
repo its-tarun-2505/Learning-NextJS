@@ -2,8 +2,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 
+export const revalidate = 60;
+
 const getProductData = async (id) => {
-  const res = await fetch(`https://dummyjson.com/products/${id}`);
+  const res = await fetch(`https://dummyjson.com/products/${id}`, {
+    next: { revalidate: 60 }, // ISR: cache & revalidate every 60s
+  });
   return res.json();
 };
 
@@ -31,7 +35,6 @@ const Page = async ({ params }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        
         {/* Product Images */}
         <div className={styles.imageSection}>
           <img src={thumbnail} alt={title} className={styles.mainImage} />
