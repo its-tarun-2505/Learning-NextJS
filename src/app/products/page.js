@@ -12,7 +12,8 @@ const fetchProducts = async () => {
 // Group products by category utility
 const groupByCategory = (products) =>
   products.reduce((acc, product) => {
-    const { category } = product;
+    const { category, title } = product;
+    if(title === "Beef Steak") return acc; // Exclude specific products
     if (!acc[category]) acc[category] = [];
     acc[category].push(product);
     return acc;
@@ -48,7 +49,8 @@ const Products = async () => {
                     />
                     <div className={style.productInfo}>
                       <h4 className={style.title}>{product.title}</h4>
-                      <p className={style.price}>PRICE: ${product.price}</p>
+                      <p className={style.description}>{product.description.slice(0, 85)}...</p>
+                      <p className={style.price}>Price: ₹{product.price}</p>
                       <p className={style.rating}>Rating: ★ {product.rating}</p>
                     </div>
                     <div className={style.cardButtons}>
