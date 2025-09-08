@@ -1,14 +1,16 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div>
-      <h1 style={{textAlign:'center', margin:'2rem 0' }}>Welcome to the Products Store</h1>
-      <p style={{textAlign:'center', fontSize:'1.2rem'}}>
-        <Link href="/products">View Products</Link>
-      </p>
+    <div className={styles.hero}>
+      <div className={styles.heroContent}>
+        <h1 className={styles.heading}>Welcome to the Products Store</h1>
+        <p className={styles.subheading}>Discover amazing products at the best prices</p>
+        <Link href="/products">
+          <button className={styles.ctaButton}>View Products</button>
+        </Link>
+      </div>
     </div>
   );
 }

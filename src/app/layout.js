@@ -21,24 +21,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-       
-        <header style={{display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0.5rem 5rem', borderBottom:'1px solid #ccc'}}>
-          <h1>Brand</h1>
-          <nav style={{display:'flex', gap:'1rem', fontSize:'1.2rem'}}>
-            <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
-          </nav>
-        </header>
+        <div className="layout">
+          <header className="header">
+            <h1>CartCloud</h1>
+            <nav>
+              <Link href="/">Home</Link>
+              <Link href="/products">Products</Link>
+            </nav>
+          </header>
 
-        <main>
-          {children}
-        </main>
+          <main className="main">{children}</main>
 
-        <footer style={{textAlign:'center', padding:'1rem', borderTop:'1px solid #ccc', position:'relative', bottom:'0', width:'100%'}}>
-          <p>&copy; 2025 My Next.js App</p>
-        </footer>
-
+          <footer className="footer">
+            <p>&copy; 2025 My Next.js App</p>
+          </footer>
+        </div>
       </body>
     </html>
   );
 }
+

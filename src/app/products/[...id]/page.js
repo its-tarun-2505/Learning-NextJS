@@ -11,7 +11,7 @@ const getProductData = async (id) => {
   return res.json();
 };
 
-const Page = async ({ params }) => {
+const ProductPage = async ({ params }) => {
   const { id } = await params;
   const product = await getProductData(id);
 
@@ -82,4 +82,4 @@ const Page = async ({ params }) => {
   );
 };
 
-export default Page;
+export default ProductPage;
