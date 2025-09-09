@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "CartCloud",
   description: "CartCloud - Next.js E-commerce App",
+  icons:{
+    icon: '/assets/favicon.ico', //add custom favicon
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +26,10 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="layout">
           <header className="header">
-            <h1>CartCloud</h1>
+            <Link href="/" className="logo">
+              <img src="/assets/logo1.png" alt="CartCloud Logo" width={200} height={60} />
+            </Link>
+            {/* <h1>CartCloud</h1> */}
             <nav>
               <Link href="/">Home</Link>
               <Link href="/products">Products</Link>

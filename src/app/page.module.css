@@ -13,8 +13,9 @@
 .banner{
   border-radius: 25px;
   overflow: hidden;
-  border-bottom: 3px solid #2563eb;
-  border-right: 3px solid #2563eb;
+  /* border-bottom: 3px solid #2563eb; */
+  /* border-right: 3px solid #2563eb; */
+  
 }
 
 .banner img{
