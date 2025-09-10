@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,11 @@ export default function RootLayout({ children }) {
             </nav>
           </header>
 
-          <main className="main">{children}</main>
+          <main className="main">
+            <Providers>
+              {children}
+            </Providers>
+          </main>
 
           <footer className="footer">
             <p>&copy; 2025 My Next.js App</p>

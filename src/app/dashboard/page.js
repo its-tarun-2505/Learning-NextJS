@@ -3,7 +3,7 @@
 import React from 'react'
 import { useRouter } from 'next/navigation';
 
-const page = () => {
+const DashboardPage = () => {
    const route = useRouter();
 
   const handleClick = async() => {
@@ -27,4 +27,4 @@ const page = () => {
   ) 
 }
 
-export default page
+export default DashboardPage
